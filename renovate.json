@@ -1,0 +1,14 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended"
+    ]
+}
+
+  "major": {
+    "dependencyDashboardApproval": true,
+    "automerge": false
+  },
+
+  "platformAutomerge": true,
+  "automerge": true
