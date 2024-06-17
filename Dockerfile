@@ -1,4 +1,4 @@
-FROM alpine:3.13.2 AS builder
+FROM alpine:3.20.0 AS builder
 
 # Install all dependencies required for compiling busybox
 RUN apk add gcc musl-dev make perl
