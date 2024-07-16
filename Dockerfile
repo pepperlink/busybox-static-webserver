@@ -4,9 +4,9 @@ FROM alpine:3.13.2 AS builder
 RUN apk add gcc musl-dev make perl
 
 # Download busybox sources
-RUN wget https://busybox.net/downloads/busybox-1.35.0.tar.bz2 \
-  && tar xf busybox-1.35.0.tar.bz2 \
-  && mv /busybox-1.35.0 /busybox
+RUN wget https://busybox.net/downloads/busybox-1.36.1.tar.bz2 \
+  && tar xf busybox-1.36.1.tar.bz2 \
+  && mv /busybox-1.36.1 /busybox
 
 WORKDIR /busybox
 
@@ -46,4 +46,3 @@ COPY . .
 
 # Run busybox httpd
 CMD ["/busybox", "httpd", "-f", "-v", "-p", "3000", "-c", "httpd.conf"]
-
